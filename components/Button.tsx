@@ -13,10 +13,10 @@ const Button = ({
       onClick={() => {
         callback()
       }}
-      className={`font-base border rounded-lg h-10 w-[8rem] grid place-items-center font-bold ${
+      className={`font-base border rounded-lg h-10 w-[8rem] grid place-items-center font-bold transition-all ${
         variant === 'primary'
-          ? 'bg-green text-white border-green'
-          : 'bg-white text-green border-green'
+          ? 'bg-green text-white border-green hover:bg-transparent hover:text-green'
+          : 'bg-white text-green border-green hover:bg-green hover:text-white'
       }`}
     >
       {label}

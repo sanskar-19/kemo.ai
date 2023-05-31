@@ -1,15 +1,15 @@
-const HighlightsCard = () => {
+export interface CardProps {
+  src: string
+  title: string
+  description: string
+}
+const HighlightsCard = ({ src, title, description }: CardProps) => {
   return (
-    <article className='flex flex-col w-[23rem] min-h-[21.25rem] rounded-lg shadow-highlights-card overflow-hidden'>
-      <img
-        src='/images/article.png'
-        className='w-full h-[10.625rem] object-cover'
-      />
+    <article className='flex flex-col max-w-full w-[23rem] min-h-[21.25rem] rounded-lg shadow-highlights-card overflow-hidden transition-all cursor-pointer duration-300 hover:-translate-y-2'>
+      <img src={src} className='w-full h-[10.625rem] object-cover' />
       <div className='p-6 flex flex-col gap-y-4'>
-        <h3 className='text-green text-2xl leading-5 font-bold'>Surfing</h3>
-        <h3 className='text-dark text-base font-normal leading-5'>
-          Best Hawaiian islands for surfing.
-        </h3>
+        <h3 className='text-green text-2xl leading-5 font-bold'>{title}</h3>
+        <h3 className='text'>{description}</h3>
 
         <img
           src='/icons/arrow.png'

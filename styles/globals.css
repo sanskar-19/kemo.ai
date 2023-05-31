@@ -23,3 +23,7 @@
 -webkit-text-fill-color: transparent;
 background-clip: text;
 }
+
+.text{
+  @apply text-dark text-base font-normal leading-5;
+}

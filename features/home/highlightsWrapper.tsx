@@ -19,9 +19,13 @@ const Highlights = () => {
   }, [])
 
   return (
-    <section className='flex gap-y-6 w-full max-w-[71rem] mt-10 mb-20 flex-col'>
+    <section className='flex gap-y-6 w-full max-w-[71rem] mt-10 mb-20 flex-col px-4 sm:px-0'>
       <h3 className='text-base text-dark font-bold'>Highlights</h3>
-      <HighlightsCard />
+      <HighlightsCard
+        src={'/images/article.png'}
+        title={'Surfing'}
+        description={'Best Hawaiian islands for surfing.'}
+      />
     </section>
   )
 }
