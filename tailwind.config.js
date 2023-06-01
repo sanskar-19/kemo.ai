@@ -15,7 +15,8 @@ module.exports = {
       },
 
       fontFamily: {
-        'plex-mono': "'IBM Plex Mono', monospace",
+        'plex-mono': "var(--plex-mono)",
+        'greycliff': "GreyCliff",
       },
       colors: {
         'dark': "var(--dark)",

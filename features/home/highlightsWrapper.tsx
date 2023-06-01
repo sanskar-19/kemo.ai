@@ -1,31 +1,23 @@
-import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import HighlightsCard from './highlightsCard'
-import { controller } from '@/services/controller'
+export interface HighlightsProps {
+  highlights: Array<any>
+}
 
-const Highlights = () => {
-  const [highlights, setHighlights] = useState(null)
-
-  async function fetchHighlights () {
-    try {
-      let apiResponse = await controller.FetchHighlights()
-      // setHighlights(apiResponse)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  useEffect(() => {
-    fetchHighlights()
-  }, [])
-
+const Highlights = ({ highlights }: HighlightsProps) => {
   return (
     <section className='flex gap-y-6 w-full max-w-[71rem] mt-10 mb-20 flex-col px-4 sm:px-0'>
       <h3 className='text-base text-dark font-bold'>Highlights</h3>
-      <HighlightsCard
-        src={'/images/article.png'}
-        title={'Surfing'}
-        description={'Best Hawaiian islands for surfing.'}
-      />
+      <div className='flex gap-x-4'>
+        {highlights.map((highlight, index) => (
+          <HighlightsCard
+            src={highlight?.image}
+            title={highlight?.title}
+            description={highlight?.description}
+            key={index}
+          />
+        ))}
+      </div>
     </section>
   )
 }

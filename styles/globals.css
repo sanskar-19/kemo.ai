@@ -3,10 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "GreyCliff";
+  src: url("/fonts/Fontspring-DEMO-greycliffcf-medium.otf");
+}
+
+
 :root{
   /* Defining font family */
   --plex-mono : 'IBM Plex Mono', monospace;
-
   /* Colors */
   --dark : #001A1A;
   --green : #008080;

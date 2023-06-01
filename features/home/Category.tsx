@@ -1,14 +1,9 @@
 import Button from '@/components/Button'
 import CategoryModal from './CategoryModal'
-
-const CategoryWrapper = () => {
-  const categories = [
-    { title: 'Adventure', link: '/' },
-    { title: 'Culinary', link: '/' },
-    { title: 'Eco-tourism', link: '/' },
-    { title: 'Family', link: '/' },
-    { title: 'Sport', link: '/' }
-  ]
+export interface CategoryProps {
+  categories: Array<any>
+}
+const CategoryWrapper = ({ categories }: CategoryProps) => {
   return (
     <section className='w-full bg-lightgreen'>
       <section className='flex pt-10 pb-20 max-w-[71rem] mx-auto gap-x-8 flex-col px-4 sm:px-0 sm:flex-row gap-y-10'>
@@ -18,8 +13,8 @@ const CategoryWrapper = () => {
           <div className='flex flex-col gap-y-2 w-full'>
             {categories?.map((category, index) => (
               <CategoryModal
-                title={category.title}
-                link={category.link}
+                title={category.name}
+                link={category.link ?? '/'}
                 key={index}
               />
             ))}
