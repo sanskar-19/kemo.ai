@@ -9,7 +9,7 @@ const Header = () => {
         <div className='w-full flex justify-between gap-x-20 items-center'>
           <Link href={'/'}>
             <img
-              src={'/images/logo.png'}
+              src={'/images/logo.webp'}
               alt="Couldn't load image"
               className='w-[5.875rem] h-[2.25rem] object-contain'
             />

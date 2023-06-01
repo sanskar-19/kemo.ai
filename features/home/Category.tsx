@@ -33,7 +33,7 @@ const CategoryWrapper = ({ categories }: CategoryProps) => {
               </div>
             </div>
             <img
-              src='images/avatar.png'
+              src='images/avatar.webp'
               alt=''
               className='w-[4.625rem] h-[4.625rem] sm:h-[8rem] sm:w-[8rem] object-contain'
             />

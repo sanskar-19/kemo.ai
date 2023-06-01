@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'island-background': 'url("/images/hero-background.png")',
+        'island-background': 'url("/images/hero-background.webp")',
       },
 
       fontFamily: {

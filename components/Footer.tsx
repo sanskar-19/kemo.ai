@@ -6,7 +6,7 @@ const Footer = () => {
     >
       <section className='w-full flex justify-between items-center max-w-[71rem] mx-auto '>
         <img
-          src={'/images/logo.png'}
+          src={'/images/logo.webp'}
           alt="Couldn't load image"
           className='w-[5.875rem] h-[2.25rem] object-contain invert'
         />
