@@ -12,8 +12,8 @@ const HighlightDetail = ({ highlightDetails }: HighlightDetailProps) => {
 '
     >
       <Header />
-      <div className='flex gap-y-4 flex-grow bg-lightgreen max-w-[71rem] mx-auto gap-x-2 py-8 flex-wrap'>
-        <div className='flex gap-x-4 w-full flex-shrink-0'>
+      <div className='flex gap-y-4 flex-grow bg-lightgreen max-w-[71rem] mx-auto gap-x-2 py-8 flex-wrap '>
+        <div className='flex gap-x-4 w-full flex-shrink-0 mt-[4.75rem] sm:mt-0 px-4 sm:p-0'>
           <Link href={'/'} className='font-semibold'>
             Home
           </Link>
@@ -25,15 +25,15 @@ const HighlightDetail = ({ highlightDetails }: HighlightDetailProps) => {
             {highlightDetails?.name}
           </Link>
         </div>
-        <div className='flex gap-x-4'>
-          <div className='flex flex-col w-1/2 gap-y-4  overflow-hidden justify-start items-start flex-shrink-0'>
+        <div className='flex gap-x-4 flex-col sm:flex-row'>
+          <div className='flex flex-col w-full sm:w-1/2 gap-y-4  overflow-hidden justify-start items-start flex-shrink-0'>
             <img
               src={highlightDetails?.image}
               className='h-full object-cover object-center rounded-lg
 '
             />
           </div>
-          <div className='flex flex-col w-1/2 gap-y-4'>
+          <div className='flex flex-col w-full sm:w-1/2 gap-y-4 p-4 sm:p-0'>
             <h2 className='text-green text-3xl font-bold'>
               {highlightDetails?.name}
             </h2>
@@ -41,10 +41,10 @@ const HighlightDetail = ({ highlightDetails }: HighlightDetailProps) => {
             {highlightDetails?.activities?.map(
               (activity: any, index: number) => (
                 <div
-                  className='p-6 bg-white shadow-highlights-card rounded-lg flex gap-x-2 items-center'
+                  className='p-2 sm:p-6 bg-white shadow-highlights-card rounded-lg flex gap-x-2 items-center'
                   key={index}
                 >
-                  <div className='rounded-[50%] bg-lightgreen text-green w-10 h-10 flex justify-center items-center font-bold'>
+                  <div className='rounded-[50%] flex-shrink-0 bg-lightgreen text-green w-10 h-10 flex justify-center items-center font-bold'>
                     {index + 1}
                   </div>
                   {activity.name}
