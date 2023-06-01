@@ -29,7 +29,7 @@ const HighlightDetail = ({ highlightDetails }: HighlightDetailProps) => {
           <div className='flex flex-col w-full sm:w-1/2 gap-y-4  overflow-hidden justify-start items-start flex-shrink-0'>
             <img
               src={highlightDetails?.image}
-              className='h-full object-cover object-center rounded-lg
+              className='h-[25rem] sm:h-full object-cover object-center rounded-lg
 '
             />
           </div>
