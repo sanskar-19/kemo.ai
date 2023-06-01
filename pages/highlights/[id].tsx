@@ -12,7 +12,7 @@ const HighlightDetail = ({ highlightDetails }: HighlightDetailProps) => {
 '
     >
       <Header />
-      <div className='flex gap-y-4 flex-grow bg-lightgreen max-w-[71rem] mx-auto gap-x-2 py-8 flex-wrap '>
+      <div className='flex gap-y-4 flex-grow bg-lightgreen w-full sm:max-w-[min(71rem,calc(100%-2rem))] mx-auto gap-x-2 py-8 flex-wrap '>
         <div className='flex gap-x-4 w-full flex-shrink-0 mt-[4.75rem] sm:mt-0 px-4 sm:p-0'>
           <Link href={'/'} className='font-semibold'>
             Home
@@ -26,10 +26,10 @@ const HighlightDetail = ({ highlightDetails }: HighlightDetailProps) => {
           </Link>
         </div>
         <div className='flex gap-x-4 flex-col sm:flex-row'>
-          <div className='flex flex-col w-full sm:w-1/2 gap-y-4  overflow-hidden justify-start items-start flex-shrink-0'>
+          <div className='flex flex-col w-full sm:w-1/2 gap-y-4 px-4 sm:px-0 overflow-hidden justify-start items-start flex-shrink-0'>
             <img
               src={highlightDetails?.image}
-              className='h-[25rem] sm:h-full object-cover object-center rounded-lg
+              className='w-full h-[25rem] sm:h-full object-cover object-center rounded-lg
 '
             />
           </div>
