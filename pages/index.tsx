@@ -28,6 +28,7 @@ export default function Home ({ highlights, categories }: HomeProps) {
   )
 }
 
+// Generating the page server side for better performance and SEO purposes
 export async function getServerSideProps () {
   const highlights = await fetch('https://web-dev.dev.kimo.ai/v1/highlights')
   const categories = await fetch('https://web-dev.dev.kimo.ai/v1/categories')

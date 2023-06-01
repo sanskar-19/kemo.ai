@@ -60,14 +60,17 @@ const HighlightDetail = ({ highlightDetails }: HighlightDetailProps) => {
 
 export default HighlightDetail
 
+// Generating the page server side for better performance and SEO purposes
 export async function getServerSideProps (context: any) {
   let highlightDetails = await fetch(
     `https://web-dev.dev.kimo.ai/v1/activities/${context.params.id}`
   )
 
   let highlightsJson = await highlightDetails.json()
-  console.log(highlightDetails.status)
+
+  // console.log(highlightDetails.status)
   if (highlightDetails.status === 422) {
+    // Redirecting in case of error
     return {
       redirect: {
         destination: `/${highlightDetails.status}`,
