@@ -5,7 +5,7 @@ export interface HighlightDetailProps {
   highlightDetails: any
 }
 const HighlightDetail = ({ highlightDetails }: HighlightDetailProps) => {
-  console.log(highlightDetails)
+  // console.log(highlightDetails)
   return (
     <section
       className='w-full flex-grow bg-lightgreen
