@@ -22,6 +22,24 @@
   font-family: var(--plex-mono);
 }
 
+@media screen and (width <= 1180px) {
+  html{
+    font-size: 14px;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  html{
+    font-size: 12px;
+  }
+}
+
+@media screen and (width <= 820px) {
+  html{
+    font-size: 10px;
+  }
+}
+
 .hero-gradient-text{
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 6.44%, #FFFFFF 95.08%);
 -webkit-background-clip: text;
