@@ -8,7 +8,7 @@ const Header = () => {
       <section className='flex w-full bg-white px-6 py-5 sm:rounded-xl max-w-[71rem]  justify-between'>
         <div className='w-full flex justify-between gap-x-20 items-center'>
           <img
-            src={'images/logo.png'}
+            src={'/images/logo.png'}
             alt="Couldn't load image"
             className='w-[5.875rem] h-[2.25rem] object-contain'
           />
